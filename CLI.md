@@ -1,0 +1,110 @@
+# 🎭 Playwright CLI Cheat Sheet
+
+## Run tests in headed mode
+To run your tests in headed mode, use the **--headed** flag. This gives you the ability to visually see how Playwright interacts with the website.
+
+**npx playwright test --headed**
+
+### Useful Playwright CLI options
+- **--headed**: Run tests in headed mode (default: headless).
+- **--browser**: Run tests in a different browser `chromium`, `firefox`, or `webkit`. It can be specified multiple times (default: `chromium`).
+- **--browser-channel**: Browser channel to be used.
+- **--slowmo**: Slows down Playwright operations by the specified amount of milliseconds. Useful so that you can see what is going on (default: 0).
+- **--device**: Device to be emulated.
+- **--output**: Directory for artifacts produced by tests (default: `test-results`).
+- **--tracing**: Whether to record a trace for each test. `on`, `off`, or `retain-on-failure` (default: `off`).
+- **--video**: Whether to record video for each test. `on`, `off`, or `retain-on-failure` (default: `off`).
+- **--screenshot**: Whether to automatically capture a screenshot after each test. `on`, `off`, or `only-on-failure` (default: `off`).
+- **--full-page-screenshot**: Whether to take a full page screenshot on failure. By default, only the viewport is captured. Requires `--screenshot` to be enabled (default: `off`).
+
+## Run tests on different browsers
+To specify which browser you would like to run your tests on, use the **--project** flag followed by the browser name.
+
+**npx playwright test --project webkit**
+
+To specify multiple browsers to run your tests on, use the **--project** flag multiple times followed by each browser name.
+
+**npx playwright test --project webkit --project firefox**
+
+## Run specific tests
+To run a single test file, pass in the test file name that you want to run.
+
+**npx playwright test landing-page.spec.ts**
+
+To run a set of test files from different directories, pass in the directory names that you want to run the tests in.
+
+**npx playwright test tests/todo-page/ tests/landing-page/**
+
+To run files that have **landing** or **login** in the file name, simply pass in these keywords to the CLI.
+
+**npx playwright test landing login**
+
+To run a test with a specific title, use the **-g** flag followed by the title of the test.
+
+**npx playwright test -g "add a todo item"**
+
+## Run last failed tests
+To run only the tests that failed in the last test run, first run your tests and then run them again with the **--last-failed** flag.
+
+**npx playwright test --last-failed**
+
+## Run tests in VS Code
+Tests can be run right from VS Code using the VS Code extension. Once installed you can simply click the green triangle next to the test you want to run or run all tests from the testing sidebar. Check out our Getting Started with VS Code guide for more details.
+
+**install playwright extension**
+
+
+# 🎭 Playwright CLI Cheat Sheet
+
+## Run tests in headed mode
+To run your tests in headed mode, use the **--headed** flag. This gives you the ability to visually see how Playwright interacts with the website.
+
+**npx playwright test --headed**
+
+### Useful Playwright CLI options
+- **--headed**: Run tests in headed mode (default: headless).
+- **--browser**: Run tests in a different browser `chromium`, `firefox`, or `webkit`. It can be specified multiple times (default: `chromium`).
+- **--browser-channel**: Browser channel to be used.
+- **--slowmo**: Slows down Playwright operations by the specified amount of milliseconds. Useful so that you can see what is going on (default: 0).
+- **--device**: Device to be emulated.
+- **--output**: Directory for artifacts produced by tests (default: `test-results`).
+- **--tracing**: Whether to record a trace for each test. `on`, `off`, or `retain-on-failure` (default: `off`).
+- **--video**: Whether to record video for each test. `on`, `off`, or `retain-on-failure` (default: `off`).
+- **--screenshot**: Whether to automatically capture a screenshot after each test. `on`, `off`, or `only-on-failure` (default: `off`).
+- **--full-page-screenshot**: Whether to take a full page screenshot on failure. By default, only the viewport is captured. Requires `--screenshot` to be enabled (default: `off`).
+
+## Run tests on different browsers
+To specify which browser you would like to run your tests on, use the **--project** flag followed by the browser name.
+
+**npx playwright test --project webkit**
+
+To specify multiple browsers to run your tests on, use the **--project** flag multiple times followed by each browser name.
+
+**npx playwright test --project webkit --project firefox**
+
+## Run specific tests
+To run a single test file, pass in the test file name that you want to run.
+
+**npx playwright test landing-page.spec.ts**
+
+To run a set of test files from different directories, pass in the directory names that you want to run the tests in.
+
+**npx playwright test tests/todo-page/ tests/landing-page/**
+
+To run files that have **landing** or **login** in the file name, simply pass in these keywords to the CLI.
+
+**npx playwright test landing login**
+
+To run a test with a specific title, use the **-g** flag followed by the title of the test.
+
+**npx playwright test -g "add a todo item"**
+
+## Run last failed tests
+To run only the tests that failed in the last test run, first run your tests and then run them again with the **--last-failed** flag.
+
+**npx playwright test --last-failed**
+
+## Run tests in VS Code
+Tests can be run right from VS Code using the VS Code extension. Once installed you can simply click the green triangle next to the test you want to run or run all tests from the testing sidebar. Check out our Getting Started with VS Code guide for more details.
+
+**install playwright extension**
